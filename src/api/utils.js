@@ -1,20 +1,21 @@
 import { toast } from "react-toastify";
 
-const getBaseUrl = () => {
-  let url = window.location;
-  let baseUrl =
-    url.protocol + "//" + url.host + "/" + url.pathname.split("/")[1];
+// const getBaseUrl = () => {
+//   let url = window.location;
+//   let baseUrl =
+//     url.protocol + "//" + url.host + "/" + url.pathname.split("/")[1];
 
-  if (baseUrl.includes("localhost")) {
-    baseUrl = "http://localhost:8000";
-  } else {
-    baseUrl = url.protocol + "//" + url.host;
-  }
+//   if (baseUrl.includes("localhost")) {
+//     baseUrl = "http://localhost:8000";
+//   } else {
+//     baseUrl = "https://pizza-company-backend.herokuapp.com";
+//   }
 
-  return baseUrl;
-};
+//   return baseUrl;
+// };
 
-export const BASE_URL = getBaseUrl();
+export const BASE_URL = "https://pizza-company-backend.herokuapp.com";
+// export const BASE_URL = getBaseUrl();
 
 export const getSuccessToast = (message) => {
   toast.success(message, {
